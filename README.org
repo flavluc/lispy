@@ -1,0 +1,14 @@
+#+TITLE: Lispy
+#+AUTHOR: fuyu
+
+* Lispy
+
+a scheme intepreter in python.
+
+to run the tests do the following:
+
+#+begin_src
+poetry shell
+poetry install
+poetry run pytest
+#+end_src
