@@ -90,10 +90,12 @@ global_env = standard_env()
 
 def repl(prompt='lis.py> '):
     "A prompt-read-eval-print loop."
-    while True:
-        val = eval(parse(raw_input(prompt)))
+    ipt = str(input(prompt))
+    while ipt != "exit":
+        val = eval(parse(ipt))
         if val is not None:
             print(lispstr(val))
+        ipt = str(input(prompt))
 
 def lispstr(exp):
     "Convert a Python object back into a Lisp-readable string."
